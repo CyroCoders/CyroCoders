@@ -7,4 +7,4 @@ window.addEventListener('load', function(){
 console.log(Math.sqrt(document.body.offsetHeight*document.body.offsetHeight + document.body.offsetWidth*document.body.offsetWidth)/document.body.offsetHeight+"deg")
 
 
-fetch('https://serverstat.sushantshah.repl.co/membercount/842428958397038663').then(response => console.log(response.json()))
+fetch('https://serverstat.sushantshah.repl.co/membercount/842428958397038663').then(response => response.json() )

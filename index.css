@@ -4,7 +4,6 @@ body,html {
     margin:  0px;
     padding: 0px;
     max-width: 100vw;
-    overflow-x: hidden;
     font-family: Montserrat, 'Courier New', Courier, monospace;
     overflow: -moz-scrollbars-none;
     -ms-overflow-style: none;
@@ -68,6 +67,7 @@ body,html::-webkit-scrollbar {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 #server-statistics-box img {
