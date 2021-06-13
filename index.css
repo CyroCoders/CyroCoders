@@ -135,6 +135,7 @@ nav .navInner .brand {
     justify-content: space-between; 
     align-items: center;
     box-sizing:border-box;
+    color: white;
 }
 
 nav .navInner .links {
