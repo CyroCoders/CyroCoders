@@ -14,9 +14,6 @@ fetch('https://serverstat.sushantshah.repl.co/membercount/842428958397038663').t
 document.addEventListener('scroll', (event) =>{
     if (window.scrollY > 575){
         document.getElementsByClassName("div-fs")[0].style.position = "unset";
-        if(getScrollSpeed() > 50){
-            //document.getElementsByClassName("div-fs")[2].scrollIntoView()
-        }
     } else {
         document.getElementsByClassName("div-fs")[0].style.position = "fixed";
 

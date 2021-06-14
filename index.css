@@ -9,7 +9,7 @@ body,html {
     overflow: -moz-scrollbars-none;
     -ms-overflow-style: none;
     color: #7289D9;
-
+    scroll-behavior: smooth;
 }
 
 
@@ -60,6 +60,7 @@ body,html::-webkit-scrollbar {
 }
 
 #server-statistics-box {
+    pointer-events: none; 
     width: 100%;
     min-height: 700px;
     position: absolute;
@@ -92,6 +93,7 @@ div #hero {
 }
 
 #server-statistics-box div {
+    pointer-events: auto; 
     position: absolute;
     top: var(--server-statistics-box);
     right: 0;
@@ -205,6 +207,7 @@ button {
     color: #7157C7;
     font-weight: 500;
     text-transform: uppercase;
+    cursor:pointer;
 }
 .button-wrapper {
     background: linear-gradient(
