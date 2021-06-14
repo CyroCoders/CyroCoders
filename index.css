@@ -51,7 +51,7 @@ body,html::-webkit-scrollbar {
 }
 
 #server-statistics-box {
-    width: 100vw;
+    width: 100%;
     position: absolute;
     top: calc(100vh - var(--server-statistics-box));
     mask-image: url('stastics-bg.png');
