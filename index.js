@@ -1,14 +1,15 @@
+var winWidth, winHeight;
 function setDynamicCSSProperties(){
   document.querySelector(':root').style.setProperty("--server-statistics-box", (200 - 0) * (document.getElementById("server-statistics-box").offsetHeight - 0) / (470 - 0) + 70 + "px");
   document.querySelector(':root').style.setProperty("--top-div-padding",document.getElementById("server-statistics-box").offsetHeight-((200 - 0) * (document.getElementById("server-statistics-box").offsetHeight - 0) / (470 - 0) + 70) + "px");
   document.querySelector(':root').style.setProperty("--screen-diagonal", Math.sqrt(document.body.offsetHeight*document.body.offsetHeight + document.body.offsetWidth*document.body.offsetWidth) + "px");
   document.querySelector(':root').style.setProperty("--corner-diagonal-angle", Math.asin(document.querySelector(':root').style.getPropertyValue("corner-diagonal")/document.body.offsetHeight));
+  winHeight = Math.min(document.documentElement.clientHeight, window.innerHeight || 0);
+  winWidth = Math.min(document.documentElement.clientWidth, window.innerWidth || 0);
 }
 window.addEventListener('load', setDynamicCSSProperties);
 
 window.onresize = setDynamicCSSProperties
-var winHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-var winWidth = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 console.log(window.scrollY)
 
 console.log(Math.sqrt(document.body.offsetHeight*document.body.offsetHeight + document.body.offsetWidth*document.body.offsetWidth)/document.body.offsetHeight+"deg")
