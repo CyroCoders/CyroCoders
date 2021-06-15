@@ -14,8 +14,10 @@ fetch('https://serverstat.sushantshah.repl.co/membercount/842428958397038663').t
 document.addEventListener('scroll', (event) =>{
     if (window.scrollY > 575){
         document.getElementsByClassName("div-fs")[0].style.position = "unset";
+        document.getElementById("statistics-margin").style.marginTop = "0px";
     } else {
         document.getElementsByClassName("div-fs")[0].style.position = "fixed";
+        document.getElementById("statistics-margin").style.marginTop = "100vh";
 
     }
 })
