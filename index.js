@@ -1,9 +1,12 @@
-window.addEventListener('load', function(){
-    document.querySelector(':root').style.setProperty("--server-statistics-box", (200 - 0) * (document.getElementById("server-statistics-box").offsetHeight - 0) / (470 - 0) + 70 + "px");
-    document.querySelector(':root').style.setProperty("--top-div-padding",document.getElementById("server-statistics-box").offsetHeight-((200 - 0) * (document.getElementById("server-statistics-box").offsetHeight - 0) / (470 - 0) + 70) + "px");
-    document.querySelector(':root').style.setProperty("--screen-diagonal", Math.sqrt(document.body.offsetHeight*document.body.offsetHeight + document.body.offsetWidth*document.body.offsetWidth) + "px");
-    document.querySelector(':root').style.setProperty("--corner-diagonal-angle", Math.asin(document.querySelector(':root').style.getPropertyValue("corner-diagonal")/document.body.offsetHeight));
-});
+function setDynamicCSSProperties(){
+  document.querySelector(':root').style.setProperty("--server-statistics-box", (200 - 0) * (document.getElementById("server-statistics-box").offsetHeight - 0) / (470 - 0) + 70 + "px");
+  document.querySelector(':root').style.setProperty("--top-div-padding",document.getElementById("server-statistics-box").offsetHeight-((200 - 0) * (document.getElementById("server-statistics-box").offsetHeight - 0) / (470 - 0) + 70) + "px");
+  document.querySelector(':root').style.setProperty("--screen-diagonal", Math.sqrt(document.body.offsetHeight*document.body.offsetHeight + document.body.offsetWidth*document.body.offsetWidth) + "px");
+  document.querySelector(':root').style.setProperty("--corner-diagonal-angle", Math.asin(document.querySelector(':root').style.getPropertyValue("corner-diagonal")/document.body.offsetHeight));
+}
+window.addEventListener('load', setDynamicCSSProperties);
+
+window.onresize = setDynamicCSSProperties
 var winHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 console.log(window.scrollY)
 
@@ -13,12 +16,11 @@ fetch('https://serverstat.sushantshah.repl.co/membercount/842428958397038663').t
 
 document.addEventListener('scroll', (event) =>{
     if (window.scrollY > 575){
-        document.getElementsByClassName("div-fs")[0].style.position = "unset";
+        document.getElementById("Hero").style.position = "unset";
         document.getElementById("statistics-margin").style.marginTop = "0px";
     } else {
-        document.getElementsByClassName("div-fs")[0].style.position = "fixed";
+        document.getElementById("Hero").style.position = "fixed";
         document.getElementById("statistics-margin").style.marginTop = "100vh";
-
     }
 })
 
