@@ -8,6 +8,7 @@ window.addEventListener('load', setDynamicCSSProperties);
 
 window.onresize = setDynamicCSSProperties
 var winHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+var winWidth = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 console.log(window.scrollY)
 
 console.log(Math.sqrt(document.body.offsetHeight*document.body.offsetHeight + document.body.offsetWidth*document.body.offsetWidth)/document.body.offsetHeight+"deg")
@@ -15,7 +16,7 @@ console.log(Math.sqrt(document.body.offsetHeight*document.body.offsetHeight + do
 fetch('https://serverstat.sushantshah.repl.co/membercount/842428958397038663').then(response => console.log(response.json()))
 
 document.addEventListener('scroll', (event) =>{
-    if (window.scrollY > 575){
+    if (window.scrollY > 575 || winWidth <= 768){
         document.getElementById("Hero").style.position = "unset";
         document.getElementById("statistics-margin").style.marginTop = "0px";
     } else {
