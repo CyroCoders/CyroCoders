@@ -6,6 +6,13 @@ function setDynamicCSSProperties(){
   document.querySelector(':root').style.setProperty("--corner-diagonal-angle", Math.asin(document.querySelector(':root').style.getPropertyValue("corner-diagonal")/document.body.offsetHeight));
   winHeight = Math.min(document.documentElement.clientHeight, window.innerHeight || 0);
   winWidth = Math.min(document.documentElement.clientWidth, window.innerWidth || 0);
+  if (window.scrollY > 575 || winWidth <= 768){
+      document.getElementById("Hero").style.position = "unset";
+      document.getElementById("statistics-margin").style.marginTop = "0px";
+  } else {
+      document.getElementById("Hero").style.position = "fixed";
+      document.getElementById("statistics-margin").style.marginTop = "100vh";
+  }
 }
 window.addEventListener('load', setDynamicCSSProperties);
 
