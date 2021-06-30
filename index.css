@@ -216,7 +216,7 @@ button {
     color: #7157C7;
     font-weight: 500;
     text-transform: uppercase;
-    cursor:pointer;
+    cursor: pointer;
 }
 .button-wrapper {
     background: linear-gradient(

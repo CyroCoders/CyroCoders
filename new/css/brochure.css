@@ -1,0 +1,44 @@
+.brochure{
+    padding: 12px 20px;
+    border-radius: 100px;
+    width: max-content;
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.red {
+    background-color: #ff6b6b66;
+    color: #ffdcdc;
+    box-shadow: 0px 4px 8px 0rem #ff6b6b33;
+}
+
+.yellow {
+    background-color: #ffff6a66;
+    color: #ffffdc;
+    box-shadow: 0px 4px 8px 0rem #ffff6a33;
+}
+
+.green {
+    background-color: #6aff6a66;
+    color: #dcffdc;
+    box-shadow: 0px 4px 8px 0rem #6aff6a33;
+}
+
+.cyan {
+    background-color: #6affff66;
+    color: #dcffff;
+    box-shadow: 0px 4px 8px 0rem #6affff33;  
+}
+
+.blue {
+    background-color: #6a6aff66;
+    color: #dcdcff;
+    box-shadow: 0px 4px 8px 0rem #6a6aff33;
+}
+
+.purple {
+    background-color: #ff6aff66;
+    color: #ffdcff;
+    box-shadow: 0px 4px 8px 0rem #ff6aff33;    
+}
