@@ -4,57 +4,110 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css">
+    <title>CyroCoders</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/sm/base.css">
+    <link rel="stylesheet" href="css/md/base.css">
+    <link rel="stylesheet" href="css/lg/base.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/brochure.css">
+    <link rel="stylesheet" href="css/navbar.css">
 </head>
 <body>
     <nav>
-        <div class="navInner">
-            <div class="brand">
-                <img src="bitmap100.png" alt="LOGO" srcset="">
-                CYROCODERS
+        <div id="brand">
+            <img src="images/cyro-logo-out.png">
+            <span class="hidden-sm hidden-md">
+                Cyrocoders
             </div>
-            <div class="links">
-                <ul>
-                    <li><a href="#home">HOME</a></li>
-                    <li><a href="#about">ABOUT US</a></li>
-                    <li><a href="#discord">DISCORD</a></li>
-                    <li><a href="#contact">CONTACT US</a></li>
-                </ul>
-            </div>
+        </div>
+        <div id="links">
+            <input type="checkbox" id="menu-checkbox">
+            <label for="menu-checkbox" id="hamburger-button">
+                <span></span>
+                <span>
+                    <span></span>
+                    <span></span>
+                </span>
+                <span></span>
+            </label>
+            <ul>
+                <li>
+                    <a href="#home">HOME</a>
+                </li>
+                <li>
+                    <a href="about">ABOUT</a>
+                </li>
+                <li>
+                    <a href="discord">DISCORD</a>
+                </li>
+                <li>
+                    <a href="#contact">CONTACT US</a>
+                </li>
+            </ul>
         </div>
     </nav>
-    <div class="div-fs ch-center font-blue vertical" id="Hero">
-        <h1>Hello, Dear Dev</h1>
-        <p class="w-50 text-center">We Are Building A Community Of Passionate Devs Like You. Meet New Friends, Take Part In Hackathons, Find Freelancers/Hirers, Or Find People For A Startup Idea. It's All Good.</p>
-        <div class="button-wrapper">
-        <button onclick="window.location.href = '/discord'">Join Now!</button>
-    </div>
-    </div>
-    <div id="server-statistics-box">
-        <img src="stastics-bg.png">
-        <div>
-            <ul>
-                <li>Members</li>
-                <li>Bots</li>
-                <li>Freelancers</li>
-            </ul>
-            <ul>
-                <li>19</li>
-                <li>6</li>
-                <li>5</li>
-            </ul>
+    <div id="main">
+        <a name="home"></a>
+        <div class="fs vc">
+            <div class="w50-lg h50-md">
+                <div class="brochure cyan">Welcome To Cyrocoders</div>
+                <h1 class="wrap-50 Ubuntu">We Are Building A Community.</h1>
+                <p class="Work-Sans">We Are Building A Community Of Passionate Devs Like You. Meet New Friends, Take Part In Hackathons, Find Freelancers/Hirers, Or Find People For A Startup Idea. It's All Good.</p>
+                <a href="about"><button class="cyan">Know More</button></a>
+            </div>
+        </div>
+        <div class="vt">
+            <div>
+                <div class="brochure purple">Hackathons</div>
+                <h1 class="wrap-50 Ubuntu">CC-Hacks 2021</h1>
+                <p class="Work-Sans">CC-Hacks Aims To Get Talented Coders From Around The World, Be Old Or Young, Work Together And Compete, Making Apps That Can Change The Present And Make The World A Happy Place.</p>
+                <a href="https://cc-hacks.devpost.com/"><button class="purple">Know More</button></a>
+            </div>
         </div>
     </div>
-    <div id="statistics-margin"><!--------Absolute Padding--------></div>
-    <div id="main-body">
-        <div class="div-fs">
-            <h1>Welcome To A New World Of Developers</h1>
-            <p>
-                Hello, This Is Sushant Shah And I Welcome You To Join Cyrocoders, A Community For Developers By An Developer. Looking For Partners For A Start-Up, Or Finding A Team For Your Hackathon? No More Searching. Join Our Discord Community And Meet Developers Of All Kind Of Skill Sets, Professionals And Amateurs. 
-            </p>
+    <div id="footer" class="row-lg row-md col-sm">
+        <div class="col hc">
+            <h5>Socials</h5>
+            <div class="icon-linear">
+                <button class="icon-btn" style="--data-bg: #5866f266; --data-shadow: #5866f233">
+                    <img src="images/Discord-Logo-White.svg">
+                </button>
+                <button class="icon-btn" style="--data-bg: #063e5466; --data-shadow: #063e5433">
+                    D
+                </button>
+            </div>
+        </div>
+        <div class="col hc">
+            <h5>Links</h5>
+            <ul>
+                <li>
+                    <a href="/#home">Home</a>
+                </li>
+                <li>
+                    <a href="about">About</a>
+                </li>
+                <li>
+                    <a href="/discord">Discord</a>
+                </li>
+                <li>
+                    <a href="/contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col hc">
+            <h5>Social</h5>
+            <div class="icon-linear">
+                <button class="icon-btn" style="--data-bg: #5866f266; --data-shadow: #5866f233">
+                    <img src="images/Discord-Logo-White.svg">
+                </button>
+                <button class="icon-btn" style="--data-bg: #063e5466; --data-shadow: #063e5433">
+                    D
+                </button>
+            </div>
         </div>
     </div>
-    <script src="index.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

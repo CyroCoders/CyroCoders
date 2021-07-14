@@ -10,54 +10,10 @@ html,body {
     font-family: "Ubuntu";
     color: #ffffff;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
-nav {
-    height: 150px !important;
-    color: #ffffff !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    width: 100vw !important;
-    backdrop-filter: blur(10px) !important;
-    position: fixed !important;
-    top: 0 !important;
-
-    border-bottom-left-radius: 50vw 20px;
-    border-bottom-right-radius: 50vw 20px;
-}
-
-nav #brand {
-    margin-left: 50px;
-    margin-right: 50px;
-    font-size: 1.25em;
-}
-
-nav #brand img {
-    height: 75px;
-    width: 75px;
-    border-radius: 75px;
-}
-
-nav #links {
-    display: flex;
-    align-items: center;
-    margin-left: 50px;
-    margin-right: 50px;
-}
-
-nav #links ul {
-    list-style: none;
-    padding: 0px;
-    display: inline-flex;
-    margin: 0px;
-}
-
-nav #links ul li {
-    margin: 16px;
-}
-
-nav #links ul li a {
+a {
     text-decoration: none;
     color: #ffffff;
 }
@@ -89,6 +45,14 @@ nav #links ul li a {
     padding-right: 32px;
 }
 
+.w50 {
+    width: 50%
+}
+
+.h50 {
+    height: 50%
+}
+
 .vc {
     display: flex;
     align-items: center;
@@ -110,6 +74,17 @@ nav #links ul li a {
     padding-right: 32px;
 }
 
+.hc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hc div {
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
 .wrap-50{
     width: 50vw;
     flex-wrap: wrap;
@@ -120,7 +95,7 @@ nav #links ul li a {
 }
 
 .Work-Sans {
-    font-family: "Work-Sans", "Ubuntu";
+    font-family: "work sans";
 }
 
 .icon-btn {
@@ -176,17 +151,19 @@ background-color: rgba(255,255,255,0.2);
 }
 
 #footer {
-    height: 400px;
+    min-height: 400px;
+    max-height: max-content;
+    width: 100vw;
     border: 1px solid rgba(255,255,255,0.1);
     background-color: #6affff66;
     color: #dcffff;
-    box-shadow: 0px 4px 8px 0rem var(#6affff33);
+    box-shadow: 0px 4px 8px 0rem #6affff33;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    margin-top: 100px;
 }
 
-#footer .col {
+.col {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -194,19 +171,45 @@ background-color: rgba(255,255,255,0.2);
     max-width: 30vw;
 }
 
-#footer .col ul {
+.col ul {
     list-style: none;
     margin: 0px;
     padding: 0px;
 }
 
-#footer .col ul li {
+.col ul li {
     text-decoration: none;
     color: #ffffff;
     font-size: 1.1em;
 }
-#footer .col ul li {
+.col ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1em;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    max-width: 30vw;
+}
+
+.row ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.row ul li {
     text-decoration: none;
     color: #ffffff;
     font-size: 1.1em;
+}
+
+.row ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1em;
 }
