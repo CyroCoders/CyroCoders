@@ -1,0 +1,137 @@
+nav {
+    height: 150px !important;
+    color: #ffffff !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100vw !important;
+    backdrop-filter: blur(10px) !important;
+    position: fixed !important;
+    top: 0 !important;
+
+    /*box-shadow: 0px 4px 8px 0rem #6affff33 !important;*/
+
+    border-bottom-left-radius: 50vw 20px;
+    border-bottom-right-radius: 50vw 20px;
+}
+
+#nav-margin {
+    height: 150px
+}
+
+nav #brand {
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 1.25em;
+}
+
+nav #brand img {
+    height: 75px;
+    width: 75px;
+    border-radius: 75px;
+}
+
+nav #links {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+nav #links ul {
+    list-style: none;
+    padding: 0px;
+    display: inline-flex;
+    margin: 0px;
+}
+
+nav #links ul li {
+    margin: 16px;
+}
+
+nav #links ul li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#menu-checkbox {
+    display: none;
+}
+@media (max-width: 732px){
+    #menu-checkbox,#hamburger-button{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    nav #links ul {
+        display: none;
+    }
+
+    #hamburger-button span:nth-child(1), #hamburger-button span:nth-child(2) > span,#hamburger-button span:nth-child(3) {
+        display: block;
+        height: 5px;
+        width: 100%;
+        background: #ffffff;
+        border-radius: 5px;
+        opacity: 1;
+        left: 0;
+        left: 0;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .25s ease-in-out;
+        -moz-transition: .25s ease-in-out;
+        -o-transition: .25s ease-in-out;
+        transition: .25s ease-in-out;
+    }
+
+    #hamburger-button span > span {
+        position: absolute;
+        top: 20px;
+    }
+
+    #hamburger-button {
+        width: 45px;
+        height: 45px;
+        position: relative;
+        transform: rotate(0deg);
+        transition: .5s ease-in-out;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #menu-checkbox:checked ~ #hamburger-button {
+        transition: 0ms;
+        margin-top: 125%;
+    }
+    
+    #menu-checkbox:checked ~ #hamburger-button > span:nth-child(1) {
+        width: 0%;
+    }
+    
+    #menu-checkbox:checked ~ #hamburger-button span > span:nth-child(1) {
+        transform: rotate(45deg);
+    }
+    
+    #menu-checkbox:checked ~ #hamburger-button span > span:nth-child(2) {
+        transform: rotate(-45deg);
+    }
+    
+    #menu-checkbox:checked ~ #hamburger-button > span:nth-child(3) {
+        width: 0%;
+    }
+    #menu-checkbox:checked ~ ul {
+        list-style: none;
+        padding: 0px;
+        display: block;
+    }
+}
+
+::-webkit-scrollbar {
+    display: none;
+}

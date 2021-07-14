@@ -144,4 +144,8 @@
         color: #ffffff;
         font-size: 1em;
     }
+    
+    .hidden-sm {
+        display: none;
+    }
 }

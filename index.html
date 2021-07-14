@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CyroCoders</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/sm/base.css">
@@ -12,14 +12,26 @@
     <link rel="stylesheet" href="css/lg/base.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/brochure.css">
+    <link rel="stylesheet" href="css/navbar.css">
 </head>
 <body>
     <nav>
         <div id="brand">
             <img src="images/cyro-logo-out.png">
-            Cyrocoders
+            <span class="hidden-sm hidden-md">
+                Cyrocoders
+            </div>
         </div>
         <div id="links">
+            <input type="checkbox" id="menu-checkbox">
+            <label for="menu-checkbox" id="hamburger-button">
+                <span></span>
+                <span>
+                    <span></span>
+                    <span></span>
+                </span>
+                <span></span>
+            </label>
             <ul>
                 <li>
                     <a href="#home">HOME</a>
