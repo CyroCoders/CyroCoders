@@ -65,7 +65,12 @@ nav #links ul li a {
     }
 
     nav #links ul {
-        display: none;
+        transition: .25s ease-in-out;
+        position: absolute;
+        height: 0;
+        overflow: hidden;
+        top: 100px;
+        backdrop-filter: blur(10px);
     }
 
     #hamburger-button span:nth-child(1), #hamburger-button span:nth-child(2) > span,#hamburger-button span:nth-child(3) {
@@ -77,13 +82,7 @@ nav #links ul li a {
         opacity: 1;
         left: 0;
         left: 0;
-        -webkit-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
         transform: rotate(0deg);
-        -webkit-transition: .25s ease-in-out;
-        -moz-transition: .25s ease-in-out;
-        -o-transition: .25s ease-in-out;
         transition: .25s ease-in-out;
     }
 
@@ -97,17 +96,12 @@ nav #links ul li a {
         height: 45px;
         position: relative;
         transform: rotate(0deg);
-        transition: .5s ease-in-out;
+        transition: .25s ease-in-out;
         cursor: pointer;
         display: flex;
         justify-content: space-around;
         flex-direction: column;
         align-items: center;
-    }
-    
-    #menu-checkbox:checked ~ #hamburger-button {
-        transition: 0ms;
-        margin-top: 125%;
     }
     
     #menu-checkbox:checked ~ #hamburger-button > span:nth-child(1) {
@@ -125,10 +119,17 @@ nav #links ul li a {
     #menu-checkbox:checked ~ #hamburger-button > span:nth-child(3) {
         width: 0%;
     }
+
     #menu-checkbox:checked ~ ul {
+        transition: .25s ease-in-out;
         list-style: none;
         padding: 0px;
         display: block;
+        height: max-content;
+    }
+
+    #menu-checkbox:checked ~ ul li {
+        backdrop-filter: blur(10px) !important;
     }
 }
 
